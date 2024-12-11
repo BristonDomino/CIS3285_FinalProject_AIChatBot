@@ -26,7 +26,17 @@ class Program
 
         IBotService botService = new DialogflowBotService(sessionsClient, sessionPath);
 
-       while (true)
+        IBotService decoratedBotService = new BotServiceDecorator(botService);
+
+        /**** Use this for advanced bot ****/
+        ChatBot chatBot = new AdvancedBot();
+        chatBot.StartConversation();
+
+        /*** Use this for basic bot ******/
+        //ChatBot chatBot = new BasicBot();
+        //chatBot.StartConversation();
+
+        while (true)
        {
             Console.Write("You: ");
             string userInput = Console.ReadLine();
