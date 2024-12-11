@@ -8,7 +8,7 @@ namespace CIS3285_FinalProject_AIChatBot
 {
     public interface IBotService
     {
-        string GetBotResponse(string userInput);
+        Task<string> GetBotResponseAsync(string userInput);
 
     }
 }

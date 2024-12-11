@@ -8,7 +8,7 @@ using CIS3285_FinalProject_AIChatBot;
 //save
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         // Set the environment variable for credentials
         System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"C:\Users\bdddo.BRISTONSDESKTOP\OneDrive\files that can't be upload to school drive\Fall 2024\Software Design\Finual project\Jason file\winged-sol-443923-e8-c1cc1b1c1615.json");
@@ -22,7 +22,7 @@ class Program
         string sessionPath = $"projects/{projectId}/locations/{location}/agents/{agentId}/sessions/{sessionId}";
         Console.WriteLine($"Session Path: {sessionPath}");
 
-        SessionsClient sessionsClient = SessionsClient.Create();
+        SessionsClient sessionsClient = await SessionsClient.CreateAsync();
 
         IBotService botService = new DialogflowBotService(sessionsClient, sessionPath);
 
@@ -30,11 +30,24 @@ class Program
        {
             Console.Write("You: ");
             string userInput = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(userInput)) break;
+            if (string.IsNullOrWhiteSpace(userInput))
+            {
+                Console.WriteLine("Input cannot be empty. Please try again.");
+                continue;
+            }
 
-            string botResponse = botService.GetBotResponse(userInput);
-            Console.WriteLine($"Bot: {botResponse}");
-       }
+            try
+            {
+                string botResponse = await botService.GetBotResponseAsync(userInput);
+                Console.WriteLine($"Bot: {botResponse}");
+            }
+            catch (Exception ex)  
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+           
+
+        }
     }
 
 

@@ -18,7 +18,7 @@ namespace CIS3285_FinalProject_AIChatBot
             _sessionPath = sessionPath;
         }
 
-        public string GetBotResponse(string userInput)
+        public async Task<string> GetBotResponseAsync(string userInput)
         {
             // Create the text input
             var textInput = new TextInput { Text = userInput };
@@ -31,7 +31,7 @@ namespace CIS3285_FinalProject_AIChatBot
             };
 
             // Call Dialogflow CX API
-            var response = _sessionsClient.DetectIntent(new DetectIntentRequest
+            var response = await _sessionsClient.DetectIntentAsync(new DetectIntentRequest
             {
                 Session = _sessionPath,
                 QueryInput = queryInput
