@@ -16,7 +16,9 @@ class Program
         // Create a session client
         string projectId = "winged-sol-443923-e8";
         string location = "global";
-        string agentId = "09f4a4bb-2f33-4db8-a5ed-fec6105b713f";
+      //  string agentId = "09f4a4bb-2f33-4db8-a5ed-fec6105b713f";
+        string agentId = "306944b0-f26e-434d-bb37-3d994d98da83";
+
         string sessionId = Guid.NewGuid().ToString();
 
         string sessionPath = $"projects/{projectId}/locations/{location}/agents/{agentId}/sessions/{sessionId}";
