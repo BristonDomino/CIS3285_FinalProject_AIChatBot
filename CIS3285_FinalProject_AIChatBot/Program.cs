@@ -5,7 +5,10 @@ using static Google.Rpc.Context.AttributeContext.Types;
 using Google.Cloud.Dialogflow.Cx.V3;
 using CIS3285_FinalProject_AIChatBot;
 
-//save
+/// <summary>
+/// This class is my original class to test the Chatbot before creating the GUI
+/// when running this one it will just run in the console
+/// </summary>
 class Program
 {
     static async Task Main(string[] args)
