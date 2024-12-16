@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CIS3285_FinalProject_AIChatBot
 {
-    internal class DialogflowBotService : IBotService
+    public class DialogflowBotService : IBotService
     {
         private readonly SessionsClient _sessionsClient;
         private readonly string _sessionPath;

@@ -31,8 +31,8 @@ class Program
         IBotService decoratedBotService = new BotServiceDecorator(botService);
 
         /**** Use this for advanced bot ****/
-        ChatBot chatBot = new AdvancedBot();
-        chatBot.StartConversation();
+        //ChatBot chatBot = new AdvancedBot();
+        //chatBot.StartConversation();
 
         /*** Use this for basic bot ******/
         //ChatBot chatBot = new BasicBot();
