@@ -32,9 +32,7 @@ Update the GOOGLE_APPLICATION_CREDENTIALS path in Program.cs to point to your JS
 Build and run the project.
 
 Future Enhancements:
-Add a graphical user interface (GUI) using Windows Forms or WPF.
-Expand chatbot functionalities with more predefined intents and entities.
-Implement additional integrations, such as database storage for chat history.
+If I had more time for this project, I would Add additional features to the GUI to make it more appealing and intuitive for users. I will also expand the chatbot’s functionality beyond small talk by improving its neural network to handle complex and meaningful conversations.
 
 Project Team:
 Developed by Briston and collaborators as part of the CIS3285 course project.
