@@ -2,7 +2,7 @@
 
 CIS3285_FinalProject_AIChatBot
 Overview
-This is the final project for CIS3285 - Software Design, developed in C# using Visual Studio 2022. The goal of this project was to create a functional AI chatbot integrated with Google Dialogflow CX, showcasing various software design principles and patterns. The chatbot communicates with users via a command-line interface and provides dynamic responses powered by Dialogflow CX.
+This is the final project for CIS3285 - Software Design, developed in C# using Visual Studio 2022. The goal of this project was to create a functional AI chatbot integrated with Google Dialogflow CX, showcasing various software design principles and patterns. The chatbot communicates with users via either a command-line interface or a GUI that I have created and provides dynamic responses powered by Dialogflow CX.
 
 Features Implemented
 The project was developed in sprints using Scrum methodology. Each sprint added new features and refined the design. Below is a summary of the implemented features:
