@@ -36,3 +36,5 @@ If I had more time for this project, I would Add additional features to the GUI 
 
 #### Project Team:
 Developed by Briston and collaborators as part of the CIS3285 course project.
+
+<img src="ChatBot GUI with Chats.png"></img>
